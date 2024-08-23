@@ -2,9 +2,15 @@
   "name": "demo",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://demo.leighdahlin.com",
+  "exports": {
+    "exports": "./modern.js",
+    "main": "./legacy.cjs"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "set-script build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
