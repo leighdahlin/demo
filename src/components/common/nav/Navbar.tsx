@@ -14,16 +14,16 @@ export default function Navbar() {
 
   const links = [
     {
-      displayName: 'About',
-      link: '/about',
+      displayName: 'Get Started',
+      link: '/get-started',
     },
     {
-      displayName: 'Portfolio',
-      link: '/portfolio',
+      displayName: 'CMS Experience',
+      link: '/cms-experience',
     },
     {
-      displayName: 'Work With Me',
-      link: '/work-with-me',
+      displayName: 'Interactive Features',
+      link: '/interactive-features',
     },
   ];
 
@@ -96,7 +96,7 @@ export default function Navbar() {
                   <li key={l.displayName} className="group relative">
                     <Link
                       href={l.link}
-                      className="uppercase font-semibold tracking-[.1rem]"
+                      className="uppercase font-semibold tracking-[.05rem]"
                     >
                       {l.displayName}
                     </Link>
@@ -132,7 +132,7 @@ export default function Navbar() {
                   </div>
                 </li> */}
                 <li>
-                  <OutlinedButtonLink text="Contact" link="/contact" />
+                  <OutlinedButtonLink text="Login" link="/admin" />
                 </li>
               </ul>
             ) : (

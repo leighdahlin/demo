@@ -22,7 +22,8 @@ export default function Footer() {
           </div>
           <div className="flex flex-col-reverse gap-[2rem] md:gap-[0rem] md:w-[75%] md:flex-row">
             <div className="flex flex-col items-center md:w-2/3">
-              <OutlinedButtonLink text="Get Custom Quote" link="/contact" />
+              <h2 className='text-dark-blue uppercase font-semibold tracking-[.05rem] pb-[0.5rem]'>Interested In Trying It Out?</h2>
+              <OutlinedButtonLink text="Request Access" link="/request-access" />
               <div className="flex justify-center items-center gap-10 pt-[2rem]">
                 <a
                   href="https://www.linkedin.com/in/leighdahlin/"
@@ -59,19 +60,19 @@ export default function Footer() {
             <div className="flex justify-center sm:justify-start md:justify-end font-semibold md:w-1/3 gap-[2rem] text-dark-blue dark:text-off-white">
               <ul className="flex flex-col flex-wrap items-center sm:items-start gap-[1rem]">
                 <li className="group relative w-fit">
-                  <Link href="/about">About</Link>
+                  <Link href="/get-started">Get Started</Link>
                   <div className="h-[.15rem] transition-[width] duration-250 ease-in-out w-0 bg-customGrey absolute block right-auto bottom-[-.3125rem] top-[auto] group-hover:w-full group-hover:right-[auto]" />
                 </li>
                 <li className="group relative w-fit">
-                  <Link href="/work-with-me">Work With Me</Link>
+                  <Link href="/cms-experience">CMS Experience</Link>
                   <div className="h-[.15rem] transition-[width] duration-250 ease-in-out w-0 bg-customGrey absolute block right-auto bottom-[-.3125rem] top-[auto] group-hover:w-full group-hover:right-[auto]" />
                 </li>
                 <li className="group relative w-fit">
-                  <Link href="/portfolio">Portfolio</Link>
+                  <Link href="/interactive-features">Interative Features</Link>
                   <div className="h-[.15rem] transition-[width] duration-250 ease-in-out w-0 bg-customGrey absolute block right-auto bottom-[-.3125rem] top-[auto] group-hover:w-full group-hover:right-[auto]" />
                 </li>
                 <li className="group relative w-fit">
-                  <Link href="/contact">Contact</Link>
+                  <Link href="/admin">Login</Link>
 
                   <div className="h-[.15rem] transition-[width] duration-250 ease-in-out w-0 bg-customGrey absolute block right-auto bottom-[-.3125rem] top-[auto] group-hover:w-full group-hover:right-[auto]" />
                 </li>
