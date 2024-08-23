@@ -1,5 +1,6 @@
 import React from 'react';
 import ImageWithTextSection from '../common/sections/ImageWithTextSection';
+import HowItWorks from './HowItWorks';
 import { getAssetPath } from '@/utils/assetPath';
 
 export default function Home() {
@@ -19,6 +20,7 @@ export default function Home() {
         imageClass={null}
         buttonLink="/get-started"
       />
+      <HowItWorks/>
     </div>
   );
 }
