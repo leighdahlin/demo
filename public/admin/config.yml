@@ -1,0 +1,25 @@
+backend:
+  name: github
+  branch: main
+  repo: leighdahlin/demo
+  branch: main
+  auth_type: oauth
+  app_id: Ov23liWJqHc3LwsfYPcV
+  base_url: https://github-backend.decapcms.org
+  auth_endpoint: /auth
+  cms_label_prefix: "CMS"
+  oauth_scope: repo
+
+media_folder: 'public/uploads'
+public_folder: '/uploads'
+
+collections:
+  - name: 'new'
+    label: 'News Demo'
+    folder: 'content/news'
+    create: true
+    fields:
+      - { label: 'Title', name: 'name', widget: 'string', default: '{{now}}', date_format: 'MM.DD.YYYY' }
+      - { label: 'Date', name: 'description', widget: 'datetime' }
+      - { label: 'Image', name: 'image', widget: 'image', allow_multiple: false }
+      - { label: 'News Post Content', name: 'content', widget: 'markdown' }
