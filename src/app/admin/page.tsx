@@ -16,10 +16,6 @@ export default function Admin() {
         <body>
         <!-- Dashboard script-->
         <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
-        <!-- netlify identity -->
-        <script is:inline src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-        <!-- Customize the netlify identity widget to refresh on logout preventing users from using the cms when not logged in and then seeing an error -->
-        <script is:inline>netlifyIdentity.on('logout', () => location.reload());</script>
         </body>`,
       }}
     />
