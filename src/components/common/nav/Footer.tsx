@@ -1,7 +1,12 @@
 'use client';
 import Link from 'next/link';
+import Image from 'next/image';
 import OutlinedButtonLink from '../buttons/OutlinedButtonLink';
-import { getAssetPath } from '@/utils/assetPath';
+import logoTextImg from "./img/logo-text.png";
+import githubImg from "./img/footer-github.png"
+import linkedInImg from "./img/footer-linkedin.png"
+import mailImg from "./img/footer-mail.png"
+
 
 import React from 'react';
 
@@ -12,8 +17,8 @@ export default function Footer() {
       <div className="flex items-center justify-center">
         <div className="flex flex-col-reverse sm:flex-row items-center md:items-stretch justify-around gap-[2rem] md:gap-[0rem] md:justify-stretch w-full max-w-[85.75rem] mx-[0.625rem] md:mx-[1.5625rem] py-[4rem]">
           <div className="md:w-[25%]">
-            <img
-              src={getAssetPath('/images/common/logo-text.png')}
+            <Image
+              src={logoTextImg}
               height={400}
               width={500}
               alt="logo"
@@ -25,36 +30,36 @@ export default function Footer() {
               <h2 className='text-dark-blue uppercase font-semibold tracking-[.05rem] pb-[0.5rem]'>Interested In Trying It Out?</h2>
               <OutlinedButtonLink text="Request Access" link="/request-access" />
               <div className="flex justify-center items-center gap-10 pt-[2rem]">
-                <a
+                <Link
                   href="https://www.linkedin.com/in/leighdahlin/"
                   target="_blank"
                 >
-                  <img
-                    src={getAssetPath('/images/common/footer-linkedin.png')}
+                  <Image
+                    src={linkedInImg}
                     height={30}
                     width={30}
                     alt="LinkenIn icon"
                     className="hover:transition-transform hover:scale-105"
                   />
-                </a>
-                <a href="https://github.com/leighdahlin" target="_blank">
-                  <img
-                    src={getAssetPath('/images/common/footer-github.png')}
+                </Link>
+                <Link href="https://github.com/leighdahlin" target="_blank">
+                  <Image
+                    src={githubImg}
                     height={35}
                     width={35}
                     alt="Logo"
                     className="hover:transition-transform hover:scale-105"
                   />
-                </a>
-                <a href="mailto:leigh.dahlin@gmail.com">
-                  <img
-                    src={getAssetPath('/images/common/footer-mail.png')}
+                </Link>
+                <Link href="mailto:leigh.dahlin@gmail.com">
+                  <Image
+                    src={mailImg}
                     height={35}
                     width={35}
                     alt="Mail icon"
                     className="hover:transition-transform hover:scale-105"
                   />
-                </a>
+                </Link>
               </div>
             </div>
             <div className="flex justify-center sm:justify-start md:justify-end font-semibold md:w-1/3 gap-[2rem] text-dark-blue dark:text-off-white">

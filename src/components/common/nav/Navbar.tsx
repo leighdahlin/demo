@@ -1,9 +1,11 @@
 'use client';
 import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
 import OutlinedButtonLink from '../buttons/OutlinedButtonLink';
 import useIsMobile from '@/hooks/useIsMobile';
 import Link from 'next/link';
-import { getAssetPath } from '@/utils/assetPath';
+import logoTextImg from "./img/logo-text.png";
+import logoImg from "./img/logo.png"
 
 export default function Navbar() {
   const [navOpen, setNavOpen] = useState(false);
@@ -79,8 +81,8 @@ export default function Navbar() {
     <header className="sticky top-0 z-40 shadow-lg bg-white flex justify-center drop-shadow-xl">
       <div className="flex flex-row justify-between w-full max-w-[85.75rem] items-center relative h-[6rem] mx-[0.625rem] md:mx-[1.5625rem]">
         <Link href="/">
-          <img
-            src={getAssetPath('/images/common/logo-text.png')}
+          <Image
+            src={logoTextImg}
             alt="logo"
             height={400}
             width={500}
@@ -163,8 +165,8 @@ export default function Navbar() {
                 setNavOpen(false);
               }}
             >
-              <img
-                src={getAssetPath('/imgs/common/logo.png')}                
+              <Image
+                src={logoImg}                
                 alt="logo"
                 height={400}
                 width={500}

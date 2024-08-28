@@ -1,11 +1,14 @@
 import React from "react";
-import { getAssetPath } from "@/utils/assetPath";
 import Link from "next/link";
+import Image from "next/image";
+import contentMgmtImg from "./img/content-management.png"
+import customFeaturesImg from "./img/customization-features.png"
+import realTimeResults from "./img/real-time-results.png"
 
 export default function HowItWorks(){
     const sections = [
         {
-            imageRef:'/images/homepage/content-management.png',
+            imageRef: contentMgmtImg,
             imageAlt:'peices of paper',
             title:'Content Management',
             description:'Test out the demo blog, news, and events pages to see how easy it is to keep your content fresh and engaging.',
@@ -13,7 +16,7 @@ export default function HowItWorks(){
             link:'/cms-experience',
         },
         {
-            imageRef:'/images/homepage/customization-features.png',
+            imageRef: customFeaturesImg,
             imageAlt:'toggle switches',
             title:'Customization Features',
             description:'Experiment with dark mode, different carousel styles, and other interactive elements to find what suits your vision.',
@@ -21,7 +24,7 @@ export default function HowItWorks(){
             link:'/interactive-features',
         },
         {
-            imageRef:'/images/homepage/real-time-results.png',
+            imageRef: realTimeResults,
             imageAlt:'peices of paper',
             title:'Real-Time Results',
             description:"Make changes and see the results instantly—no coding required. To do this, you'll need your own login, which I can provide upon request.",
@@ -36,9 +39,9 @@ export default function HowItWorks(){
             <h1 className="pb-[2rem] text-center lg:text-left">How It Works</h1>
             <div className="flex flex-col lg:flex-row  items-center justify-between gap-[2rem]">
                 {sections.map((s)=>(
-                    <div className="flex flex-col gap-[0.5rem] max-w-[500px] lg:max-w-[350px]">
+                    <div key={s.title} className="flex flex-col gap-[0.5rem] max-w-[500px] lg:max-w-[350px]">
                         <div className="bg-bluegray rounded-lg flex justify-center items-center">
-                            <img src={getAssetPath(s.imageRef)} alt={s.imageAlt} width={270} height={270} className="w-[175px] p-[10px]"/>
+                            <Image src={s.imageRef} alt={s.imageAlt} width={270} height={270} className="w-[175px] p-[10px]"/>
                         </div>
                         <h2 className="font-bold uppercase">{s.title}</h2>
                         <p className="pb-[0.5rem]">{s.description}</p>

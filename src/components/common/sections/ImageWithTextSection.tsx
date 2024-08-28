@@ -2,6 +2,7 @@
 
 import React, { useMemo } from 'react';
 import ThreeDButtonLink from '../buttons/ThreeDButtonLink';
+import Image, {StaticImageData} from 'next/image';
 import useIsMobile from '@/hooks/useIsMobile';
 
 interface ImageWithTextSectionProps {
@@ -11,12 +12,13 @@ interface ImageWithTextSectionProps {
   paragraph: string;
   buttonText: string | null;
   buttonLink: string | null;
-  imageSrc: string;
-  imageSrcMobile: string | null;
+  imageSrc: StaticImageData;
+  imageSrcMobile: StaticImageData | null;
   imageAlt: string;
   imageWidth: number;
   imageHeight: number;
   imageClass: string | null;
+  priority: boolean;
 }
 
 export default function ImageWithTextSection({
@@ -32,6 +34,7 @@ export default function ImageWithTextSection({
   imageHeight,
   imageClass,
   buttonLink,
+  priority
 }: ImageWithTextSectionProps) {
   const isMobile = useIsMobile(1024);
   const image = useMemo(() => {
@@ -43,7 +46,8 @@ export default function ImageWithTextSection({
     <section
       className={`w-full pt-[2rem] lg:pt-0 pb-[2rem] flex ${designSide === 'left' ? 'flex-col-reverse' : 'flex-col justify-between'} lg:flex-row items-center gap-[1rem]`}
     >
-      <img
+      <Image
+        priority={priority}
         src={image}
         alt={imageAlt}
         width={imageWidth}
